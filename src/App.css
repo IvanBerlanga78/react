@@ -793,7 +793,7 @@ h1 {
   h1 {
     font-size: 19vw;
   }
-  h2.hp-hero__ib {
+  h2.hp-hero__ib, h2.middle-section__heading {
     font-size: 8vw;
   }
   .hp-hero__heading-grid {
