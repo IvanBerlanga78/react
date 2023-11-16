@@ -1,6 +1,7 @@
 import React , {useState, useEffect, useRef, forwardRef, useImperativeHandle, useLayoutEffect} from "react";
 import {Loader, AnimatedDesk} from './Animations';
 import {useSpring, animated } from '@react-spring/web';
+import { ReviewsSlider } from "./Sliders";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from './Navbar';
@@ -10,6 +11,7 @@ import skills from '../assets/imgs/skills-image.svg';
 import profileIcon from '../assets/imgs/icon-profile.svg';
 import toolsIcon from '../assets/imgs/icon-tools.svg';
 import talkIcon from '../assets/imgs/icon-talk_icon-talk.svg';
+import imageGraffitti from "../assets/imgs/graffiti-photo.jpg";
 import imageElia1 from "../assets/imgs/imgs-projects/elia-1.jpg";
 import imageElia2 from "../assets/imgs/imgs-projects/elia-2.jpg";
 import imageElia3 from "../assets/imgs/imgs-projects/elia-3.jpg";
@@ -51,9 +53,9 @@ const ContentLayout = forwardRef((props, ref) => {
       }
     }));
 
-  gsap.registerPlugin(ScrollTrigger);
+ gsap.registerPlugin(ScrollTrigger);
 
-  const el = useRef();
+  const el = useRef();/* 
   // store the timeline in a ref.
   
   useLayoutEffect(() => {
@@ -83,7 +85,7 @@ const ContentLayout = forwardRef((props, ref) => {
     }, el);
     return () => ctx.revert();
   }, []);
-
+*/
     return (
         <>
         <div id='main' ref={el}>
@@ -144,19 +146,18 @@ const ContentLayout = forwardRef((props, ref) => {
           </div>
         </div>
         <div className='section animated'>
-        <div className='middle-container'>
-            <div>
-                <h2 className='hp-hero__ib'>Desde lo más <span className='highlight-small'>sencillo</span><br/> a lo más <span className='highlight-small'>complejo</span></h2>
-                <div className='middle-section__text-wrap'>
-                <p>Tanto si necesitas una web sencilla como si quieres incluir animaciones u otros efectos o funcionalidades más complejas, soy la persona indicada para alcanzar tus objetivos. Mis conocimientos y experiencia me permiten adaptarme a proyectos sencillos o más complicados.</p>
-            </div>      
-              <img src={sketchFlexibilidad}/>
-            </div>          
-
-        </div>   
+          <div className='middle-container'>
+                  <h2 className='middle-section__heading'>Desde lo más <span className='highlight-small'>sencillo</span><br/> a lo más <span className='highlight-small'>complejo</span></h2>
+                  <div className='middle-section__text-wrap'>
+                  <p>Tanto si necesitas una web sencilla como si quieres incluir animaciones u otros efectos o funcionalidades más complejas, soy la persona indicada para alcanzar tus objetivos. Mis conocimientos y experiencia me permiten adaptarme a proyectos sencillos o más complicados.</p>
+              </div>
+                <div className="slider-mask">
+                 <img src={imageGraffitti}/>
+                </div>               
+          </div>   
         </div>
         <div className='section animated'>
-          <div className="bcg-dots"></div>
+          <div className="bcg-dots short"></div>
           <div className='reviews-container'>
             <img className="reviews-icon" src={talkIcon}/>
             <p className='review-text'>
@@ -213,12 +214,20 @@ const ContentLayout = forwardRef((props, ref) => {
               </div>   
             </div>
           </div>
-          <div className="section contact animated" ref={compRef}>
+          <div className="section reviews">
+            <div className="container">
+                <ReviewsSlider/>
+            </div>
+          </div>
+          <div className="section contact">
             <div className="container">
               <div className="contact_container">
                 <div className="contact_text-wrapper">
-                  <h2 className="contact_heading">Contacta</h2>
-                  <p className="contact_text">Tanto si tu proyecto es <span className="highlight-small">sencillo</span> como si es más <span className="highlight-small">complejo</span>, soy la persona indicada para alcanzar tus objetivos. Contacta conmigo y <span className="highlight-small">hablémoslo</span>.</p>
+                  <div className="contact_image__wrapper">
+                    <img src={sketchFlexibilidad}/>
+                  </div>
+                  <h2 className="contact_heading" ref={compRef}>Contacta!</h2>
+                  <p className="contact_text">Tanto si tu proyecto es <span className="highlight-small">sencillo</span> como si es más <span className="highlight-small">complejo</span>, soy la persona indicada para alcanzar tus objetivos. Contacta conmigo y <span className="highlight-small">hablemos</span>.</p>
                 </div>
                 <div className="contact-icons-outer">
                   <div className="contact-icon-wrapper">

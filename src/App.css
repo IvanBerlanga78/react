@@ -355,6 +355,9 @@ img {
   overflow: hidden;
   height: 200vh;
 }
+.bcg-dots.short {
+  height: 80vh;
+}
 .bcg-dots.hp-hero {
   top: 0;
   bottom: -50vh;
@@ -424,16 +427,27 @@ h1 {
   display: grid;
 }
 .middle-container {
-    margin: 0 auto;
-    max-width: 40rem;
-    overflow: hidden;
-    text-align: center;
+  margin: 0 auto;
+  max-width: 40rem;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.middle-section__wrapper {
+  font-size: 2.5vw;
+  font-weight: 700;
 }
 .hp-hero__text-wrap {
   max-width: 16rem;
   min-width: 10rem;
 }
-
+.middle-section__heading {
+  font-size: 2.5vw;
+  font-weight: 700;
+  margin-top: 1rem;
+}
 .hp-hero_icon {
   max-width: 2rem;
   margin-bottom: 2rem;
@@ -557,6 +571,13 @@ h1 {
   width: 100%;
 }
 
+.each-slide-effect > div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 350px;
+}
+
 .each-slide>div img, .case-study__item-grid img {
   width: 100%;
     height: 100%;
@@ -674,7 +695,20 @@ h1 {
   background-color: var(--main-white);
   border: 1px solid var(--main-white);
 }
-
+.reviews .react-slideshow-container, .reviews .react-slideshow-fadezoom-wrapper {
+  max-width: 90vw;
+}
+.reviews .icon-talk {
+  max-width: 2rem;
+  margin-bottom: 1rem;
+}
+.reviews .each-slide-effect {
+  padding: 1rem;
+}
+.reviews .review-text {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
 .highlight-big {
   background: url('./assets/imgs/pen-brush.svg');
 }
@@ -790,6 +824,9 @@ h1 {
     display: flex;
     flex-direction: column;
   }
+  .reviews .react-slideshow-container, .reviews .react-slideshow-fadezoom-wrapper {
+    max-width: 90vw;
+  }
   .react-slideshow-container, .react-slideshow-fadezoom-wrapper {
     width: 90vw;
     max-width: 90vw;
@@ -827,10 +864,17 @@ h1 {
     font-size: 1.5rem;
     text-align: center;
   }
+  .section.contact {
+    padding-bottom: 12vh;
+  }
   .contact-icon-wrapper {
     max-width: 4rem;
   }
   .contact_heading {
     font-size: 16vw;
+  }
+  .contact_text {
+    font-size: 1.4rem;
+    line-height: 1em;
   }
 }

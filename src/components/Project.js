@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import SlideFade from './Sliders';
+import {SlideFade} from './Sliders';
 import LabelSmall from './Labels';
 import DetailsButton from './Buttons';
 import { slice } from "lodash";
