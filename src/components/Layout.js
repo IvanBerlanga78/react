@@ -216,7 +216,10 @@ const ContentLayout = forwardRef((props, ref) => {
           <div className="section contact animated" ref={compRef}>
             <div className="container">
               <div className="contact_container">
-                <h2 className="contact_heading">Contacto</h2>
+                <div className="contact_text-wrapper">
+                  <h2 className="contact_heading">Contacta</h2>
+                  <p className="contact_text">Tanto si tu proyecto es <span className="highlight-small">sencillo</span> como si es más <span className="highlight-small">complejo</span>, soy la persona indicada para alcanzar tus objetivos. Contacta conmigo y <span className="highlight-small">hablémoslo</span>.</p>
+                </div>
                 <div className="contact-icons-outer">
                   <div className="contact-icon-wrapper">
                     <a href="https://www.instagram.com/iberlanga.design/" className="glow-on-hover">
